@@ -1,30 +1,30 @@
 <p align="center">
-  <img src="./resources/icon-large.png" alt="CC Workflow Studio Icon" width="128">
+  <img src="./resources/icon-large.png" alt="Agent Studio Icon" width="128">
 </p>
 
-# CC Workflow Studio
+# Agent Studio
 
 <p align="center">
-  <a href="https://github.com/breaking-brake/cc-wf-studio/stargazers"><img src="https://img.shields.io/github/stars/breaking-brake/cc-wf-studio" alt="GitHub Stars" /></a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=breaking-brake.cc-wf-studio"><img src="https://vsmarketplacebadges.dev/version-short/breaking-brake.cc-wf-studio.svg?label=VS%20Marketplace" alt="VS Code Marketplace" /></a>
-  <a href="https://open-vsx.org/extension/breaking-brake/cc-wf-studio"><img src="https://img.shields.io/open-vsx/v/breaking-brake/cc-wf-studio?label=OpenVSX" alt="OpenVSX" /></a>
-  <a href="https://deepwiki.com/breaking-brake/cc-wf-studio"><img src="https://img.shields.io/badge/Ask-DeepWiki-009485" alt="Ask DeepWiki" /></a>
+  <a href="https://github.com/breaking-brake/agent-studio/stargazers"><img src="https://img.shields.io/github/stars/breaking-brake/agent-studio" alt="GitHub Stars" /></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=breaking-brake.agent-studio"><img src="https://vsmarketplacebadges.dev/version-short/breaking-brake.agent-studio.svg?label=VS%20Marketplace" alt="VS Code Marketplace" /></a>
+  <a href="https://open-vsx.org/extension/breaking-brake/agent-studio"><img src="https://img.shields.io/open-vsx/v/breaking-brake/agent-studio?label=OpenVSX" alt="OpenVSX" /></a>
+  <a href="https://deepwiki.com/breaking-brake/agent-studio"><img src="https://img.shields.io/badge/Ask-DeepWiki-009485" alt="Ask DeepWiki" /></a>
 </p>
 
 <p align="center">
-  <img src="./resources/hero.png" alt="CC Workflow Studio" width="800">
+  <img src="./resources/hero.png" alt="Agent Studio" width="800">
 </p>
 
-**You think visually. AI thinks in `.md`. CC Workflow Studio speaks both.**
+**You think visually. AI thinks in `.md`. Agent Studio speaks both.**
 
 Design workflows on a canvas. Export as Markdown your AI agent already understands. No more prompt-guessing.
 
 <p align="center">
-  <a href="https://speakerdeck.com/seiyakobayashi/cc-workflow-studio">
-    <img src="./resources/deck-preview.png" alt="Learn more: Why CC Workflow Studio?" width="600">
+  <a href="https://speakerdeck.com/seiyakobayashi/agent-studio">
+    <img src="./resources/deck-preview.png" alt="Learn more: Why Agent Studio?" width="600">
   </a>
   <br>
-  <em>Why CC Workflow Studio? - Speaker Deck Link</em>
+  <em>Why Agent Studio? - Speaker Deck Link</em>
 </p>
 
 ---
@@ -86,7 +86,7 @@ Design workflows on a canvas. Export as Markdown your AI agent already understan
 ### Launch the Extension
 
 - Click the <img src="./resources/icon.png" alt="icon" height="16" style="vertical-align: middle"> icon in the top-right corner of the editor
-- Or: Command Palette (`Cmd+Shift+P`) → **"CC Workflow Studio: Open Editor"**
+- Or: Command Palette (`Cmd+Shift+P`) → **"Agent Studio: Open Editor"**
 
 ### Create a Workflow
 
@@ -110,7 +110,7 @@ Design workflows on a canvas. Export as Markdown your AI agent already understan
 ```mermaid
 sequenceDiagram
     actor User
-    box VS Code (CC Workflow Studio)
+    box VS Code (Agent Studio)
         participant UI as Editor UI
         participant MCP as MCP Server
     end
@@ -150,7 +150,7 @@ Copyright (c) 2025 breaking-brake
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=breaking-brake/cc-wf-studio&type=Date)](https://star-history.com/#breaking-brake/cc-wf-studio&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=breaking-brake/agent-studio&type=Date)](https://star-history.com/#breaking-brake/agent-studio&Date)
 
 ## Acknowledgments
 
@@ -158,4 +158,4 @@ Built with [React Flow](https://reactflow.dev/) • Powered by [Claude Code](htt
 
 ---
 
-**Made with CC Workflow Studio**
+**Made with Agent Studio**

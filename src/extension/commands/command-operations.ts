@@ -12,7 +12,7 @@ import { scanAllCommands } from '../services/command-service';
 import { generateSubAgentFile, nodeNameToFileName } from '../services/export-service';
 import { FileService } from '../services/file-service';
 
-const outputChannel = vscode.window.createOutputChannel('CC Workflow Studio');
+const outputChannel = vscode.window.createOutputChannel('Agent Studio');
 
 /**
  * Handle BROWSE_COMMANDS request from Webview

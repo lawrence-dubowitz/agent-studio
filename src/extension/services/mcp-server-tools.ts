@@ -1,5 +1,5 @@
 /**
- * CC Workflow Studio - MCP Server Tool Definitions
+ * Agent Studio - MCP Server Tool Definitions
  *
  * Registers tools on the built-in MCP server that external AI agents
  * can call to interact with the workflow editor.
@@ -34,7 +34,7 @@ export function registerMcpTools(server: McpServer, manager: McpServerManager): 
   // Tool 1: get_current_workflow
   server.tool(
     'get_current_workflow',
-    'Get the currently active workflow from CC Workflow Studio canvas. Returns the workflow JSON and whether it is stale (from cache when the editor is closed).',
+    'Get the currently active workflow from Agent Studio canvas. Returns the workflow JSON and whether it is stale (from cache when the editor is closed).',
     {},
     async () => {
       try {
@@ -47,7 +47,7 @@ export function registerMcpTools(server: McpServer, manager: McpServerManager): 
                 type: 'text' as const,
                 text: JSON.stringify({
                   success: false,
-                  error: 'No active workflow. Please open a workflow in CC Workflow Studio first.',
+                  error: 'No active workflow. Please open a workflow in Agent Studio first.',
                 }),
               },
             ],
@@ -153,7 +153,7 @@ export function registerMcpTools(server: McpServer, manager: McpServerManager): 
   // Tool 3: apply_workflow
   server.tool(
     'apply_workflow',
-    'Apply a workflow to the CC Workflow Studio canvas. The workflow is validated before being applied. If the user has review mode enabled, they will see a diff preview and must accept changes before they are applied. If rejected, an error with message "User rejected the changes" is returned. The editor must be open. SubAgent nodes without commandFilePath will have .md files auto-created in .claude/agents/.',
+    'Apply a workflow to the Agent Studio canvas. The workflow is validated before being applied. If the user has review mode enabled, they will see a diff preview and must accept changes before they are applied. If rejected, an error with message "User rejected the changes" is returned. The editor must be open. SubAgent nodes without commandFilePath will have .md files auto-created in .claude/agents/.',
     {
       workflow: z.string().describe('The workflow JSON string to apply to the canvas'),
       description: z
@@ -381,7 +381,7 @@ export function registerMcpTools(server: McpServer, manager: McpServerManager): 
                 type: 'text' as const,
                 text: JSON.stringify({
                   success: false,
-                  error: 'No active workflow. Please open a workflow in CC Workflow Studio first.',
+                  error: 'No active workflow. Please open a workflow in Agent Studio first.',
                 }),
               },
             ],
@@ -538,7 +538,7 @@ export function registerMcpTools(server: McpServer, manager: McpServerManager): 
   // Tool 6: highlight_group_node
   server.tool(
     'highlight_group_node',
-    'Highlight a group node on the CC Workflow Studio canvas to indicate it is currently being executed. Call this before executing nodes within a group to visually track progress.',
+    'Highlight a group node on the Agent Studio canvas to indicate it is currently being executed. Call this before executing nodes within a group to visually track progress.',
     {
       groupNodeId: z
         .string()

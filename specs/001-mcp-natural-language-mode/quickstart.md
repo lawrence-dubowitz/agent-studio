@@ -19,7 +19,7 @@ This guide shows you how to use each mode effectively.
 
 ## Prerequisites
 
-- CC Workflow Studio extension installed (v2.5.0 or later)
+- Agent Studio extension installed (v2.5.0 or later)
 - At least one MCP server configured in Claude Code
   - Run `claude mcp list` to verify MCP servers are available
   - See [Claude Code MCP documentation](https://code.claude.com/docs) for setup
@@ -399,5 +399,5 @@ All three modes export to slash commands that Claude Code can execute.
 ## Related Documentation
 
 - [MCP Node Implementation](../001-mcp-node/spec.md) - Base MCP node feature
-- [Workflow Export Format](../001-cc-wf-studio/spec.md) - Details on slash command export
+- [Workflow Export Format](../001-agent-studio/spec.md) - Details on slash command export
 - [Claude Code MCP Documentation](https://code.claude.com/docs) - MCP server setup and usage

@@ -1,5 +1,5 @@
 /**
- * CC Workflow Studio - Built-in MCP Server Manager
+ * Agent Studio - Built-in MCP Server Manager
  *
  * Provides an MCP server that external AI agents (Claude Code, Roo Code, Copilot, Codex, etc.)
  * can connect to for workflow CRUD operations.
@@ -113,7 +113,7 @@ export class McpServerManager {
           // McpServer.connect() can only be called once per instance,
           // so we must create a fresh instance for each request.
           mcpServer = new McpServer({
-            name: 'cc-workflow-studio',
+            name: 'agent-studio',
             version: '1.0.0',
           });
           registerMcpTools(mcpServer, this);
@@ -162,7 +162,7 @@ export class McpServerManager {
 
       httpServer.on('error', (error: NodeJS.ErrnoException) => {
         if (error.code === 'EADDRINUSE') {
-          const msg = `Port ${listenPort} is already in use. Change the port in Settings (cc-wf-studio.mcp.port) or close the application using port ${listenPort}.`;
+          const msg = `Port ${listenPort} is already in use. Change the port in Settings (agent-studio.mcp.port) or close the application using port ${listenPort}.`;
           log('ERROR', 'MCP Server: Port in use', { port: listenPort });
           reject(new Error(msg));
         } else {
@@ -298,7 +298,7 @@ export class McpServerManager {
     expectedRevision?: number
   ): Promise<boolean> {
     if (!this.webview) {
-      throw new Error('Webview is not open. Please open CC Workflow Studio first.');
+      throw new Error('Webview is not open. Please open Agent Studio first.');
     }
 
     const requireConfirmation = this.reviewBeforeApply;

@@ -15,7 +15,7 @@ const sessionMetrics: AIGenerationMetrics[] = [];
  * Check if metrics collection is enabled
  */
 export function isMetricsCollectionEnabled(): boolean {
-  const config = vscode.workspace.getConfiguration('cc-wf-studio');
+  const config = vscode.workspace.getConfiguration('agent-studio');
   return config.get<boolean>('ai.collectMetrics', false);
 }
 
@@ -23,7 +23,7 @@ export function isMetricsCollectionEnabled(): boolean {
  * Get configured schema format
  */
 export function getConfiguredSchemaFormat(): SchemaFormat {
-  const config = vscode.workspace.getConfiguration('cc-wf-studio');
+  const config = vscode.workspace.getConfiguration('agent-studio');
   return config.get<SchemaFormat>('ai.schemaFormat', 'json');
 }
 

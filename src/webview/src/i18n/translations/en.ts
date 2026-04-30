@@ -1,5 +1,5 @@
 /**
- * CC Workflow Studio - Webview English Translations
+ * Agent Studio - Webview English Translations
  */
 
 import type { WebviewTranslationKeys } from '../translation-keys';
@@ -354,7 +354,7 @@ export const enWebviewTranslations: WebviewTranslationKeys = {
   'default.conditionSuffix': ' is met',
 
   // Tour
-  'tour.welcome': 'Welcome to CC Workflow Studio!\n\nLet us walk you through the basics.',
+  'tour.welcome': 'Welcome to Agent Studio!\n\nLet us walk you through the basics.',
   'tour.canvas':
     'This is the workflow canvas. Place nodes and connect them to build a processing pipeline.\n\nDrag nodes to move them, and drag handles (⚪) to connect nodes together.',
   'tour.propertyPanel':
@@ -823,7 +823,7 @@ export const enWebviewTranslations: WebviewTranslationKeys = {
 
   // Slack OAuth
   'slack.oauth.description':
-    'Click the Connect to Workspace button to display a confirmation screen for granting "CC Workflow Studio" access to Slack.\nOnce you grant permission, the Slack App for integration will be installed to your workspace.',
+    'Click the Connect to Workspace button to display a confirmation screen for granting "Agent Studio" access to Slack.\nOnce you grant permission, the Slack App for integration will be installed to your workspace.',
   'slack.oauth.termsOfService': 'Terms of Service',
   'slack.oauth.privacyPolicy': 'Privacy Policy',
   'slack.oauth.supportPage': 'Support Page',

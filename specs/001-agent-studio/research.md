@@ -1,7 +1,7 @@
-# Research Report: CC Workflow Studio
+# Research Report: Agent Studio
 
 **Date**: 2025-11-01
-**Branch**: 001-cc-wf-studio
+**Branch**: 001-agent-studio
 **Status**: Phase 0 Complete
 
 ## Overview

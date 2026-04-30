@@ -39,7 +39,7 @@ A practical guide for developers implementing the MCP Node feature (001-mcp-node
 
 ```bash
 # Navigate to project root
-cd /Users/se_nishikawa/chore/cc-wf-studio
+cd /Users/se_nishikawa/chore/agent-studio
 
 # Install root dependencies
 npm install
@@ -276,7 +276,7 @@ claude mcp add aws-knowledge-mcp
 
 ### Step 1: Extend workflow-definition.ts
 
-**File**: `/Users/se_nishikawa/chore/cc-wf-studio/src/shared/types/workflow-definition.ts`
+**File**: `/Users/se_nishikawa/chore/agent-studio/src/shared/types/workflow-definition.ts`
 
 ```typescript
 // Add to NodeType enum
@@ -358,7 +358,7 @@ export const VALIDATION_RULES = {
 
 ### Step 2: Create mcp-service.ts
 
-**File**: `/Users/se_nishikawa/chore/cc-wf-studio/src/extension/services/mcp-service.ts`
+**File**: `/Users/se_nishikawa/chore/agent-studio/src/extension/services/mcp-service.ts`
 
 ```typescript
 import { spawn } from 'node:child_process';
@@ -578,7 +578,7 @@ export function parseMcpDetailOutput(output: string): McpServerDetail {
 
 ### Step 3: Extend validate-workflow.ts
 
-**File**: `/Users/se_nishikawa/chore/cc-wf-studio/src/extension/utils/validate-workflow.ts`
+**File**: `/Users/se_nishikawa/chore/agent-studio/src/extension/utils/validate-workflow.ts`
 
 ```typescript
 // Add to imports
@@ -730,7 +730,7 @@ function validateParameterValue(
 
 ### McpBrowserDialog Component
 
-**File**: `/Users/se_nishikawa/chore/cc-wf-studio/src/webview/src/components/dialogs/McpBrowserDialog.tsx`
+**File**: `/Users/se_nishikawa/chore/agent-studio/src/webview/src/components/dialogs/McpBrowserDialog.tsx`
 
 ```typescript
 import React, { useEffect, useState } from 'react';
@@ -867,7 +867,7 @@ export function McpBrowserDialog({
 
 ### McpPropertyPanel Component
 
-**File**: `/Users/se_nishikawa/chore/cc-wf-studio/src/webview/src/components/panels/McpPropertyPanel.tsx`
+**File**: `/Users/se_nishikawa/chore/agent-studio/src/webview/src/components/panels/McpPropertyPanel.tsx`
 
 ```typescript
 import React, { useState } from 'react';
@@ -1212,11 +1212,11 @@ console.log('Values:', node.data.parameterValues);
 
 ## References
 
-- **Feature Spec**: `/Users/se_nishikawa/chore/cc-wf-studio/specs/001-mcp-node/spec.md`
-- **Research**: `/Users/se_nishikawa/chore/cc-wf-studio/specs/001-mcp-node/research.md`
-- **Data Model**: `/Users/se_nishikawa/chore/cc-wf-studio/specs/001-mcp-node/data-model.md`
-- **API Contracts**: `/Users/se_nishikawa/chore/cc-wf-studio/specs/001-mcp-node/contracts/`
-- **Existing Types**: `/Users/se_nishikawa/chore/cc-wf-studio/src/shared/types/workflow-definition.ts`
+- **Feature Spec**: `/Users/se_nishikawa/chore/agent-studio/specs/001-mcp-node/spec.md`
+- **Research**: `/Users/se_nishikawa/chore/agent-studio/specs/001-mcp-node/research.md`
+- **Data Model**: `/Users/se_nishikawa/chore/agent-studio/specs/001-mcp-node/data-model.md`
+- **API Contracts**: `/Users/se_nishikawa/chore/agent-studio/specs/001-mcp-node/contracts/`
+- **Existing Types**: `/Users/se_nishikawa/chore/agent-studio/src/shared/types/workflow-definition.ts`
 - **Skill Node Pattern**: Refer to existing Skill node implementation for UI/UX patterns
 
 ---

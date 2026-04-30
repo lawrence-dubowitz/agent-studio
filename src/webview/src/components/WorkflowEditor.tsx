@@ -2,7 +2,7 @@
  * Claude Code Workflow Studio - Workflow Editor Component
  *
  * Main React Flow canvas for visual workflow editing
- * Based on: /specs/001-cc-wf-studio/research.md section 3.4
+ * Based on: /specs/001-agent-studio/research.md section 3.4
  */
 
 import { PanelLeftOpen } from 'lucide-react';
@@ -50,7 +50,7 @@ import { StartMenu } from './StartMenu';
 
 /**
  * Node types registration (memoized outside component for performance)
- * Based on: /specs/001-cc-wf-studio/research.md section 3.1
+ * Based on: /specs/001-agent-studio/research.md section 3.1
  *
  * 新規ノードタイプ (Start, End, Prompt, Branch) は実装後にコメント解除
  */

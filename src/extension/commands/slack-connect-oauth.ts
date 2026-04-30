@@ -2,7 +2,7 @@
  * Slack OAuth Connection Command Handler
  *
  * Handles OAuth 2.0 authentication flow for Slack.
- * Works with the external OAuth server (cc-wf-studio-connectors) to securely
+ * Works with the external OAuth server (agent-studio-connectors) to securely
  * exchange authorization codes for access tokens.
  *
  * Based on specs/001-slack-workflow-sharing OAuth implementation plan

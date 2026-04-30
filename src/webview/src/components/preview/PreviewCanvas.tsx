@@ -102,11 +102,11 @@ const PreviewCanvasInner: React.FC<PreviewCanvasProps> = ({
 
   // Panel size state with localStorage persistence
   const [panelWidth, setPanelWidth] = useState(() => {
-    const saved = localStorage.getItem('cc-wf-studio.previewMemoPanelWidth');
+    const saved = localStorage.getItem('agent-studio.previewMemoPanelWidth');
     return saved ? Number.parseInt(saved, 10) : 280;
   });
   const [panelHeight, setPanelHeight] = useState(() => {
-    const saved = localStorage.getItem('cc-wf-studio.previewMemoPanelHeight');
+    const saved = localStorage.getItem('agent-studio.previewMemoPanelHeight');
     return saved ? Number.parseInt(saved, 10) : 120;
   });
 
@@ -123,11 +123,11 @@ const PreviewCanvasInner: React.FC<PreviewCanvasProps> = ({
 
   // Save size to localStorage when changed
   useEffect(() => {
-    localStorage.setItem('cc-wf-studio.previewMemoPanelWidth', panelWidth.toString());
+    localStorage.setItem('agent-studio.previewMemoPanelWidth', panelWidth.toString());
   }, [panelWidth]);
 
   useEffect(() => {
-    localStorage.setItem('cc-wf-studio.previewMemoPanelHeight', panelHeight.toString());
+    localStorage.setItem('agent-studio.previewMemoPanelHeight', panelHeight.toString());
   }, [panelHeight]);
 
   // Handle resize mouse events

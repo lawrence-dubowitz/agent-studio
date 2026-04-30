@@ -1,15 +1,15 @@
 {
-  "name": "cc-wf-studio",
-  "displayName": "Claude Code Workflow Studio",
+  "name": "agent-studio",
+  "displayName": "Agent Studio",
   "description": "Visual Workflow Editor for Claude Code, GitHub Copilot, and more AI agents",
   "version": "3.33.0",
   "publisher": "breaking-brake",
   "icon": "resources/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/breaking-brake/cc-wf-studio"
+    "url": "https://github.com/breaking-brake/agent-studio"
   },
-  "homepage": "https://breaking-brake.github.io/",
+  "homepage": "https://breaking-brake.github.io/agent-studio",
   "license": "AGPL-3.0-or-later",
   "keywords": [
     "ai",
@@ -34,8 +34,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "cc-wf-studio.openEditor",
-        "title": "CC Workflow Studio: Open Editor",
+        "command": "agent-studio.openEditor",
+        "title": "Agent Studio: Open Editor",
         "icon": {
           "light": "resources/icon.png",
           "dark": "resources/icon.png"
@@ -45,14 +45,14 @@
     "menus": {
       "editor/title": [
         {
-          "command": "cc-wf-studio.openEditor",
+          "command": "agent-studio.openEditor",
           "group": "navigation"
         }
       ]
     },
     "customEditors": [
       {
-        "viewType": "cc-wf-studio.workflowPreview",
+        "viewType": "agent-studio.workflowPreview",
         "displayName": "Workflow Preview",
         "selector": [
           {
@@ -63,9 +63,9 @@
       }
     ],
     "configuration": {
-      "title": "CC Workflow Studio",
+      "title": "Agent Studio",
       "properties": {
-        "cc-wf-studio.ai.schemaFormat": {
+        "agent-studio.ai.schemaFormat": {
           "type": "string",
           "enum": [
             "json",
@@ -74,19 +74,19 @@
           "default": "toon",
           "description": "Schema format for AI prompts. 'toon' reduces token consumption by ~23%."
         },
-        "cc-wf-studio.ai.collectMetrics": {
+        "agent-studio.ai.collectMetrics": {
           "type": "boolean",
           "default": false,
           "description": "Collect and log metrics for A/B comparison of schema formats. Note: Prompt format is always 'toon'."
         },
-        "cc-wf-studio.workflow.maxNodes": {
+        "agent-studio.workflow.maxNodes": {
           "type": "number",
           "default": 100,
           "minimum": 10,
           "maximum": 500,
           "description": "Maximum number of nodes allowed in a workflow."
         },
-        "cc-wf-studio.mcp.port": {
+        "agent-studio.mcp.port": {
           "type": "number",
           "default": 6282,
           "minimum": 1024,

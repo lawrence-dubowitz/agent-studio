@@ -626,7 +626,7 @@ export function generateExecutionInstructions(
     sections.push('### Group Node Execution Tracking');
     sections.push('');
     sections.push(
-      'This workflow contains group nodes. Before executing nodes within each group, call the `highlight_group_node` MCP tool on the `cc-workflow-studio` server to visually highlight the active group on the canvas.'
+      'This workflow contains group nodes. Before executing nodes within each group, call the `highlight_group_node` MCP tool on the `agent-studio` server to visually highlight the active group on the canvas.'
     );
     sections.push('');
     sections.push('| Group ID | Label |');

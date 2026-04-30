@@ -41,7 +41,7 @@ import { ConfirmDialog } from './ConfirmDialog';
 const PANEL_MIN_WIDTH = 280;
 const PANEL_MAX_WIDTH = 600;
 const PANEL_DEFAULT_WIDTH = 320;
-const PANEL_STORAGE_KEY = 'cc-wf-studio.refinementPanelWidth';
+const PANEL_STORAGE_KEY = 'agent-studio.refinementPanelWidth';
 
 /**
  * Props for RefinementChatPanel
@@ -614,7 +614,7 @@ export function RefinementChatPanel({
   };
 
   // Radio-button style accordion: only one section open at a time
-  const AI_EDIT_SECTION_KEY = 'cc-wf-studio.aiEditActiveSection';
+  const AI_EDIT_SECTION_KEY = 'agent-studio.aiEditActiveSection';
   type AiEditSection = 'native' | 'legacy';
   const [activeSection, setActiveSection] = useState<AiEditSection>(() => {
     try {

@@ -41,7 +41,7 @@ function hasGitChanges(filePath: string): boolean {
  * Opens a visual preview instead of the default text editor
  */
 export class WorkflowPreviewEditorProvider implements vscode.CustomTextEditorProvider {
-  public static readonly viewType = 'cc-wf-studio.workflowPreview';
+  public static readonly viewType = 'agent-studio.workflowPreview';
 
   constructor(private readonly context: vscode.ExtensionContext) {}
 
@@ -140,7 +140,7 @@ export class WorkflowPreviewEditorProvider implements vscode.CustomTextEditorPro
         log('INFO', 'Opening workflow in editor from custom editor', { workflowId });
 
         // Open the main Workflow Studio editor
-        await vscode.commands.executeCommand('cc-wf-studio.openEditor');
+        await vscode.commands.executeCommand('agent-studio.openEditor');
 
         // Prepare editor for loading (show loading state)
         prepareEditorForLoad(workflowId);

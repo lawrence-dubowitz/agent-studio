@@ -1,7 +1,7 @@
 /**
  * Claude Code Workflow Studio - Extension ↔ Webview Message Types
  *
- * Based on: /specs/001-cc-wf-studio/contracts/extension-webview-api.md
+ * Based on: /specs/001-agent-studio/contracts/extension-webview-api.md
  */
 
 import type { Connection, Workflow, WorkflowNode } from './workflow-definition';

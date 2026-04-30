@@ -6,7 +6,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-const STORAGE_KEY = 'cc-wf-studio.nodePaletteCollapsed';
+const STORAGE_KEY = 'agent-studio.nodePaletteCollapsed';
 const DEFAULT_COLLAPSED = false;
 
 interface UseCollapsiblePanelReturn {

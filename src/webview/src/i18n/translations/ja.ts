@@ -1,5 +1,5 @@
 /**
- * CC Workflow Studio - Webview Japanese Translations
+ * Agent Studio - Webview Japanese Translations
  */
 
 import type { WebviewTranslationKeys } from '../translation-keys';
@@ -353,7 +353,7 @@ export const jaWebviewTranslations: WebviewTranslationKeys = {
   'default.conditionSuffix': 'の場合',
 
   // Tour
-  'tour.welcome': 'CC Workflow Studioへようこそ！\n\n基本的な操作方法をご紹介します。',
+  'tour.welcome': 'Agent Studioへようこそ！\n\n基本的な操作方法をご紹介します。',
   'tour.canvas':
     'これがワークフローのキャンバスです。ノードを配置し、接続して処理フローを作成します。\n\nノードをドラッグして移動、ハンドル(⚪)をドラッグしてノード間を接続できます。',
   'tour.propertyPanel':
@@ -819,7 +819,7 @@ export const jaWebviewTranslations: WebviewTranslationKeys = {
 
   // Slack OAuth
   'slack.oauth.description':
-    'ワークスペースに接続ボタンをクリックすると、「CC Workflow Studio」にSlackへのアクセスを許可する確認画面が表示されます。\n許可を行うとワークスペースに連携用のSlack Appがインストールされます。',
+    'ワークスペースに接続ボタンをクリックすると、「Agent Studio」にSlackへのアクセスを許可する確認画面が表示されます。\n許可を行うとワークスペースに連携用のSlack Appがインストールされます。',
   'slack.oauth.termsOfService': '利用規約',
   'slack.oauth.privacyPolicy': 'プライバシーポリシー',
   'slack.oauth.supportPage': 'サポートページ',

@@ -2676,7 +2676,7 @@ export const ClaudeApiUploadDialog: React.FC<ClaudeApiUploadDialogProps> = ({
                             opacity: 0.7,
                           }}
                         >
-                          (uploaded by cc-wf-studio)
+                          (uploaded by agent-studio)
                         </span>
                       )}
                     </div>

@@ -14,7 +14,7 @@
 
 import type { WebviewTranslationKeys } from '../i18n/translation-keys';
 
-const DISMISSED_KEY_PREFIX = 'cc-wf-studio:feature-dismissed:';
+const DISMISSED_KEY_PREFIX = 'agent-studio:feature-dismissed:';
 
 export interface AnnouncementConfig {
   /** Unique identifier for localStorage persistence */

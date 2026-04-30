@@ -2,7 +2,7 @@
  * Claude Code Workflow Studio - Save Workflow Command
  *
  * Handles saving workflow definitions to .vscode/workflows/
- * Based on: /specs/001-cc-wf-studio/contracts/extension-webview-api.md
+ * Based on: /specs/001-agent-studio/contracts/extension-webview-api.md
  */
 
 import type { Webview } from 'vscode';

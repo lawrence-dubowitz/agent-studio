@@ -2,7 +2,7 @@
  * Claude Code Workflow Studio - SubAgent Node Component
  *
  * Custom React Flow node for Sub-Agent
- * Based on: /specs/001-cc-wf-studio/research.md section 3.2
+ * Based on: /specs/001-agent-studio/research.md section 3.2
  */
 
 import { BUILT_IN_SUB_AGENTS } from '@shared/constants/built-in-sub-agents';

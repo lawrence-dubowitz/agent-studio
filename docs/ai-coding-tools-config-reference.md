@@ -521,7 +521,7 @@ Cascade has several configuration keys found in the workbench:
 | **Binary** | `~/.antigravity/antigravity/bin/antigravity` |
 | **URI Scheme** | `antigravity://` (deep links) |
 
-### Integration Strategy for cc-wf-studio
+### Integration Strategy for agent-studio
 
 **Execution pattern:** Closest to **Copilot Chat** (VSCode command-based).
 

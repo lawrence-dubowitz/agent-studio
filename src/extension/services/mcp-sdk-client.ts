@@ -48,7 +48,7 @@ export async function connectToMcpServer(
 
   const client = new Client(
     {
-      name: 'cc-workflow-studio',
+      name: 'agent-studio',
       version: '1.0.0',
     },
     {
@@ -231,7 +231,7 @@ export async function connectToMcpServerHttp(
 
   const client = new Client(
     {
-      name: 'cc-workflow-studio',
+      name: 'agent-studio',
       version: '1.0.0',
     },
     {

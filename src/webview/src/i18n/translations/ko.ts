@@ -1,5 +1,5 @@
 /**
- * CC Workflow Studio - Webview Korean Translations
+ * Agent Studio - Webview Korean Translations
  */
 
 import type { WebviewTranslationKeys } from '../translation-keys';
@@ -353,7 +353,7 @@ export const koWebviewTranslations: WebviewTranslationKeys = {
   'default.conditionSuffix': '이 충족될 때',
 
   // Tour
-  'tour.welcome': 'CC Workflow Studio에 오신 것을 환영합니다!\n\n기본 조작 방법을 소개합니다.',
+  'tour.welcome': 'Agent Studio에 오신 것을 환영합니다!\n\n기본 조작 방법을 소개합니다.',
   'tour.canvas':
     '워크플로우 캔버스입니다. 노드를 배치하고 연결하여 처리 파이프라인을 만듭니다.\n\n노드를 드래그하여 이동하고 핸들(⚪)을 드래그하여 노드를 연결할 수 있습니다.',
   'tour.propertyPanel':
@@ -813,7 +813,7 @@ export const koWebviewTranslations: WebviewTranslationKeys = {
 
   // Slack OAuth
   'slack.oauth.description':
-    '워크스페이스에 연결 버튼을 클릭하면 "CC Workflow Studio"가 Slack에 액세스할 수 있도록 허용하는 확인 화면이 표시됩니다.\n허용하면 워크스페이스에 연동용 Slack App이 설치됩니다.',
+    '워크스페이스에 연결 버튼을 클릭하면 "Agent Studio"가 Slack에 액세스할 수 있도록 허용하는 확인 화면이 표시됩니다.\n허용하면 워크스페이스에 연동용 Slack App이 설치됩니다.',
   'slack.oauth.termsOfService': '이용약관',
   'slack.oauth.privacyPolicy': '개인정보처리방침',
   'slack.oauth.supportPage': '지원 페이지',

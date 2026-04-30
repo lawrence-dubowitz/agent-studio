@@ -8,11 +8,11 @@ import type { CommentaryProvider, CopilotModel, CopilotModelInfo } from '@shared
 import { create } from 'zustand';
 import { listCopilotModels } from '../services/refinement-service';
 
-const FEATURE_ENABLED_STORAGE_KEY = 'cc-wf-studio:commentary-feature-enabled';
-const ENABLED_STORAGE_KEY = 'cc-wf-studio:commentary-enabled';
-const PROVIDER_STORAGE_KEY = 'cc-wf-studio:commentary-provider';
-const COPILOT_MODEL_STORAGE_KEY = 'cc-wf-studio:commentary-copilot-model';
-const LANGUAGE_STORAGE_KEY = 'cc-wf-studio:commentary-language';
+const FEATURE_ENABLED_STORAGE_KEY = 'agent-studio:commentary-feature-enabled';
+const ENABLED_STORAGE_KEY = 'agent-studio:commentary-enabled';
+const PROVIDER_STORAGE_KEY = 'agent-studio:commentary-provider';
+const COPILOT_MODEL_STORAGE_KEY = 'agent-studio:commentary-copilot-model';
+const LANGUAGE_STORAGE_KEY = 'agent-studio:commentary-language';
 
 export interface CommentaryEntry {
   id: string;

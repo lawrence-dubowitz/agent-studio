@@ -93,7 +93,7 @@ export const StartMenu: React.FC<StartMenuProps> = ({
                 textAlign: 'center',
               }}
             >
-              CC Workflow Studio
+              Agent Studio
             </Dialog.Title>
 
             <div style={{ display: 'flex', gap: '16px' }}>

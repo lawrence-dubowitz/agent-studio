@@ -1,6 +1,6 @@
-# Feature Specification: CC Workflow Studio
+# Feature Specification: Agent Studio
 
-**Feature Branch**: `001-cc-wf-studio`
+**Feature Branch**: `001-agent-studio`
 **Created**: 2025-11-01
 **Status**: Draft
 **Input**: User description: "ClaudeCodeのSlashCommands,Sub-Agentを用いたワークフローをユーザー端末にてClaudeCodeのワンショットモードによるコマンド実行で構築できる、VSCode拡張機能を作成したい。ワークフローはVSCode拡張機能で作成した専用画面にてAWS StepFunctionsのUI画面のような形で作成できるようにしたい。"
@@ -13,11 +13,11 @@
 
 **Why this priority**: ワークフローの視覚的な設計機能は本機能の中核であり、これがなければ他の機能も価値を持たない。ユーザーが最初に体験する主要機能として最も重要。
 
-**Independent Test**: VSCode拡張機能をインストール後、コマンドパレットから「CC Workflow Studio」を開き、新規ワークフローを作成。Sub-Agentノードを1つ配置して保存できることを確認すれば、基本的なエディタ機能が動作していると検証できる。
+**Independent Test**: VSCode拡張機能をインストール後、コマンドパレットから「Agent Studio」を開き、新規ワークフローを作成。Sub-Agentノードを1つ配置して保存できることを確認すれば、基本的なエディタ機能が動作していると検証できる。
 
 **Acceptance Scenarios**:
 
-1. **Given** VSCodeが起動している状態で、**When** コマンドパレットから「Open CC Workflow Studio」を実行する、**Then** ビジュアルエディタが新しいタブで開く
+1. **Given** VSCodeが起動している状態で、**When** コマンドパレットから「Open Agent Studio」を実行する、**Then** ビジュアルエディタが新しいタブで開く
 2. **Given** ビジュアルエディタが開いている状態で、**When** 左側のツールパレットから「Sub-Agent」ノードをキャンバスにドラッグ&ドロップする、**Then** キャンバス上にSub-Agentノードが配置される
 3. **Given** ビジュアルエディタが開いている状態で、**When** 左側のツールパレットから「AskUserQuestion」ノードをキャンバスにドラッグ&ドロップする、**Then** キャンバス上にAskUserQuestionノードが配置され、分岐ポートが表示される
 4. **Given** キャンバス上にノードが配置されている状態で、**When** ノードをクリックする、**Then** 右側のプロパティパネルにノードの設定項目（名前、プロンプト）が表示される

@@ -1,7 +1,7 @@
-# Implementation Plan: CC Workflow Studio
+# Implementation Plan: Agent Studio
 
-**Branch**: `001-cc-wf-studio` | **Date**: 2025-11-01 | **Spec**: [spec.md](/Users/se_nishikawa/chore/cc-wf-studio/specs/001-cc-wf-studio/spec.md)
-**Input**: Feature specification from `/specs/001-cc-wf-studio/spec.md` and user requirement: "webviewはReact with typescript で作成してviteでビルドする形で実装したい"
+**Branch**: `001-agent-studio` | **Date**: 2025-11-01 | **Spec**: [spec.md](/Users/se_nishikawa/chore/agent-studio/specs/001-agent-studio/spec.md)
+**Input**: Feature specification from `/specs/001-agent-studio/spec.md` and user requirement: "webviewはReact with typescript で作成してviteでビルドする形で実装したい"
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 

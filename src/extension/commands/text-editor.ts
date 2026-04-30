@@ -72,7 +72,7 @@ export async function handleOpenInEditor(
     // Create a temporary file with the content
     // Use .vscode/ in workspace for cross-platform path consistency (Windows path normalization)
     const tmpDir = getTempDirectory();
-    const fileName = `tmp-cc-wf-studio-${sessionId}${getExtension(language)}`;
+    const fileName = `tmp-agent-studio-${sessionId}${getExtension(language)}`;
     const filePath = path.join(tmpDir, fileName);
 
     // Write content to temporary file

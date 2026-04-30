@@ -67,15 +67,15 @@ function extractDependentSkillNames(workflow: Workflow): string[] {
 }
 
 /**
- * Build description with cc-wf-studio metadata for Claude API (max 1024 chars).
- * Format: [cc-wf-studio] <description> [mcp:server1,server2] [skills:name1,name2]
+ * Build description with agent-studio metadata for Claude API (max 1024 chars).
+ * Format: [agent-studio] <description> [mcp:server1,server2] [skills:name1,name2]
  */
 function buildSkillDescription(
   workflow: Workflow,
   mcpServerIds: string[],
   dependentSkillNames: string[]
 ): string {
-  const prefix = '[cc-wf-studio] ';
+  const prefix = '[agent-studio] ';
   const mcpSuffix = mcpServerIds.length > 0 ? ` [mcp:${mcpServerIds.join(',')}]` : '';
   const skillsSuffix =
     dependentSkillNames.length > 0 ? ` [skills:${dependentSkillNames.join(',')}]` : '';
@@ -87,7 +87,7 @@ function buildSkillDescription(
 }
 
 /**
- * Parse skill description to extract cc-wf-studio metadata.
+ * Parse skill description to extract agent-studio metadata.
  */
 export function parseSkillDescription(description: string): {
   isFromStudio: boolean;
@@ -95,7 +95,7 @@ export function parseSkillDescription(description: string): {
   mcpServerIds: string[];
   dependentSkillNames: string[];
 } {
-  if (!description.startsWith('[cc-wf-studio] ')) {
+  if (!description.startsWith('[agent-studio] ')) {
     return {
       isFromStudio: false,
       originalDescription: description,
@@ -104,7 +104,7 @@ export function parseSkillDescription(description: string): {
     };
   }
 
-  let body = description.slice('[cc-wf-studio] '.length);
+  let body = description.slice('[agent-studio] '.length);
   let mcpServerIds: string[] = [];
   let dependentSkillNames: string[] = [];
 
@@ -409,11 +409,11 @@ export async function uploadSkillFile(
 ): Promise<UploadResult> {
   const content = await fs.promises.readFile(skillFilePath, 'utf-8');
 
-  // Ensure description has [cc-wf-studio] prefix
+  // Ensure description has [agent-studio] prefix
   const contentWithPrefix = content.replace(
     /^(---\n(?:.*\n)*?description:\s*)(["']?)(.+?)\2(\n---)/m,
     (_match, before, _quote, desc, after) => {
-      const prefixed = desc.startsWith('[cc-wf-studio]') ? desc : `[cc-wf-studio] ${desc}`;
+      const prefixed = desc.startsWith('[agent-studio]') ? desc : `[agent-studio] ${desc}`;
       return `${before}"${prefixed.replace(/"/g, '\\"')}"${after}`;
     }
   );

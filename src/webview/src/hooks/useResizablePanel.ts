@@ -10,7 +10,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 const DEFAULT_MIN_WIDTH = 200;
 const DEFAULT_MAX_WIDTH = 600;
 const DEFAULT_WIDTH = 300;
-const DEFAULT_STORAGE_KEY = 'cc-wf-studio.sidebarWidth';
+const DEFAULT_STORAGE_KEY = 'agent-studio.sidebarWidth';
 
 interface UseResizablePanelOptions {
   minWidth?: number;

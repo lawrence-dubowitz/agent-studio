@@ -1,12 +1,12 @@
-# Quickstart Guide: CC Workflow Studio
+# Quickstart Guide: Agent Studio
 
-**Branch**: 001-cc-wf-studio
+**Branch**: 001-agent-studio
 **Date**: 2025-11-01
 **Target Audience**: 開発者（初回セットアップ）
 
 ## Overview
 
-このガイドでは、CC Workflow Studio の開発環境を構築し、最初のワークフローを作成・実行するまでの手順を説明します。
+このガイドでは、Agent Studio の開発環境を構築し、最初のワークフローを作成・実行するまでの手順を説明します。
 
 ---
 
@@ -31,7 +31,7 @@
 
 ```bash
 git clone <repository-url>
-cd cc-wf-studio
+cd agent-studio
 ```
 
 ### 1.2 Install Dependencies
@@ -134,7 +134,7 @@ npm run dev
 1. VSCode で `F5` キーを押す（または「Run > Start Debugging」）
 2. 新しい Extension Development Host ウィンドウが開く
 3. コマンドパレット（`Ctrl+Shift+P` / `Cmd+Shift+P`）を開く
-4. `CC Workflow Studio: Open Editor` を実行
+4. `Agent Studio: Open Editor` を実行
 
 ---
 
@@ -208,7 +208,7 @@ npm run test:e2e
 ## 4. Project Structure Overview
 
 ```
-cc-wf-studio/
+agent-studio/
 ├── src/
 │   ├── extension/              # Extension Host 側コード
 │   │   ├── extension.ts        # エントリーポイント
@@ -232,7 +232,7 @@ cc-wf-studio/
 │   └── webview/                # Webview テスト
 │
 ├── specs/                      # 仕様ドキュメント
-│   └── 001-cc-wf-studio/
+│   └── 001-agent-studio/
 │       ├── spec.md
 │       ├── plan.md
 │       ├── data-model.md
@@ -290,13 +290,13 @@ cc-wf-studio/
 
 ### 5.2 Add a New Command
 
-新しいコマンド（例: `cc-wf-studio.duplicateWorkflow`）を追加する手順:
+新しいコマンド（例: `agent-studio.duplicateWorkflow`）を追加する手順:
 
 1. **コマンドハンドラを作成** (`src/extension/commands/duplicate-workflow.ts`):
    ```typescript
    export function registerDuplicateWorkflowCommand(context: vscode.ExtensionContext) {
      context.subscriptions.push(
-       vscode.commands.registerCommand('cc-wf-studio.duplicateWorkflow', async () => {
+       vscode.commands.registerCommand('agent-studio.duplicateWorkflow', async () => {
          // 実装
        })
      );
@@ -309,8 +309,8 @@ cc-wf-studio/
      "contributes": {
        "commands": [
          {
-           "command": "cc-wf-studio.duplicateWorkflow",
-           "title": "CC Workflow Studio: Duplicate Workflow"
+           "command": "agent-studio.duplicateWorkflow",
+           "title": "Agent Studio: Duplicate Workflow"
          }
        ]
      }
@@ -427,14 +427,14 @@ npm install -g @vscode/vsce
 vsce package
 ```
 
-出力: `cc-wf-studio-1.0.0.vsix`
+出力: `agent-studio-1.0.0.vsix`
 
 ---
 
 ### 7.3 Install Packaged Extension
 
 ```bash
-code --install-extension cc-wf-studio-1.0.0.vsix
+code --install-extension agent-studio-1.0.0.vsix
 ```
 
 ---
@@ -447,8 +447,8 @@ code --install-extension cc-wf-studio-1.0.0.vsix
 
 ```json
 {
-  "cc-wf-studio.workflowsDirectory": ".vscode/workflows",
-  "cc-wf-studio.exportDirectory": ".claude"
+  "agent-studio.workflowsDirectory": ".vscode/workflows",
+  "agent-studio.exportDirectory": ".claude"
 }
 ```
 
@@ -462,9 +462,9 @@ code --install-extension cc-wf-studio-1.0.0.vsix
 {
   "contributes": {
     "configuration": {
-      "title": "CC Workflow Studio",
+      "title": "Agent Studio",
       "properties": {
-        "cc-wf-studio.workflowsDirectory": {
+        "agent-studio.workflowsDirectory": {
           "type": "string",
           "default": ".vscode/workflows",
           "description": "ワークフロー定義ファイルの保存先ディレクトリ"
@@ -499,7 +499,7 @@ npm run build
 ```json
 {
   "activationEvents": [
-    "onCommand:cc-wf-studio.openEditor"
+    "onCommand:agent-studio.openEditor"
   ]
 }
 ```
@@ -535,11 +535,11 @@ npm install
 
 開発環境が整ったら、以下のドキュメントを参照してください:
 
-- **Feature Spec**: `/specs/001-cc-wf-studio/spec.md`
-- **Implementation Plan**: `/specs/001-cc-wf-studio/plan.md`
-- **Data Model**: `/specs/001-cc-wf-studio/data-model.md`
-- **API Contracts**: `/specs/001-cc-wf-studio/contracts/`
-- **Tasks (Phase 2)**: `/specs/001-cc-wf-studio/tasks.md` (Phase 2 で生成)
+- **Feature Spec**: `/specs/001-agent-studio/spec.md`
+- **Implementation Plan**: `/specs/001-agent-studio/plan.md`
+- **Data Model**: `/specs/001-agent-studio/data-model.md`
+- **API Contracts**: `/specs/001-agent-studio/contracts/`
+- **Tasks (Phase 2)**: `/specs/001-agent-studio/tasks.md` (Phase 2 で生成)
 
 ---
 

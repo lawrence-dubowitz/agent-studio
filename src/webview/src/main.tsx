@@ -2,7 +2,7 @@
  * Claude Code Workflow Studio - Webview Entry Point
  *
  * React 18 root initialization and VSCode API acquisition
- * Based on: /specs/001-cc-wf-studio/plan.md
+ * Based on: /specs/001-agent-studio/plan.md
  */
 
 import React from 'react';

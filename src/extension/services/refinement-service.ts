@@ -1080,7 +1080,7 @@ Codex Agent is a specialized node for executing OpenAI Codex CLI within workflow
 `
     : '';
 
-  const prompt = `You are an expert workflow designer for CC Workflow Studio.
+  const prompt = `You are an expert workflow designer for Agent Studio.
 
 **Task**: Refine a Sub-Agent Flow based on user's feedback.
 

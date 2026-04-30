@@ -566,5 +566,5 @@ export interface StateUpdatePayload {
 ## 7. References
 
 - VSCode Webview API: https://code.visualstudio.com/api/extension-guides/webview
-- Data Model: `/specs/001-cc-wf-studio/data-model.md`
-- Implementation Plan: `/specs/001-cc-wf-studio/plan.md`
+- Data Model: `/specs/001-agent-studio/data-model.md`
+- Implementation Plan: `/specs/001-agent-studio/plan.md`

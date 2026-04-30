@@ -2,7 +2,7 @@
  * Claude Code Workflow Studio - AskUserQuestion Node Component
  *
  * Custom React Flow node for AskUserQuestion with dynamic 2-4 output ports
- * Based on: /specs/001-cc-wf-studio/research.md section 3.3
+ * Based on: /specs/001-agent-studio/research.md section 3.3
  */
 
 import type { AskUserQuestionData } from '@shared/types/workflow-definition';

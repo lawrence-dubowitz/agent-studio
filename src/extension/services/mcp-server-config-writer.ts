@@ -1,5 +1,5 @@
 /**
- * CC Workflow Studio - MCP Server Config Writer
+ * Agent Studio - MCP Server Config Writer
  *
  * Writes the built-in MCP server URL to various AI agent configuration files
  * so that external agents can discover and connect to the MCP server.
@@ -21,7 +21,7 @@ import * as TOML from 'smol-toml';
 import type { AiEditingProvider, McpConfigTarget } from '../../shared/types/messages';
 import { log } from '../extension';
 
-const SERVER_ENTRY_NAME = 'cc-workflow-studio';
+const SERVER_ENTRY_NAME = 'agent-studio';
 
 interface JsonMcpConfig {
   mcpServers?: Record<string, { url?: string; [key: string]: unknown }>;

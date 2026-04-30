@@ -2,7 +2,7 @@
  * Slack OAuth Service
  *
  * Manages the OAuth 2.0 authentication flow for Slack.
- * Uses an external OAuth server (cc-wf-studio-connectors) to handle
+ * Uses an external OAuth server (agent-studio-connectors) to handle
  * authorization code exchange to protect client_secret.
  *
  * Flow:
@@ -22,7 +22,7 @@ import { log } from '../extension';
  */
 const OAUTH_CONFIG = {
   /** OAuth server base URL */
-  serverUrl: 'https://cc-wf-studio.com',
+  serverUrl: 'https://agent-studio.com',
   /** Slack OAuth Client ID (public) */
   slackClientId: '9964370319943.10022663519665',
   /** Bot Token scopes (empty - all operations use User Token) */

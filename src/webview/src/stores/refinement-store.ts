@@ -18,27 +18,27 @@ import { create } from 'zustand';
 import { listCopilotModels } from '../services/refinement-service';
 
 // localStorage keys
-const MODEL_STORAGE_KEY = 'cc-wf-studio.refinement.selectedModel';
-const COPILOT_MODEL_STORAGE_KEY = 'cc-wf-studio.refinement.selectedCopilotModel';
-const CODEX_MODEL_STORAGE_KEY = 'cc-wf-studio.refinement.selectedCodexModel';
-const CODEX_REASONING_EFFORT_STORAGE_KEY = 'cc-wf-studio.refinement.selectedCodexReasoningEffort';
-const ALLOWED_TOOLS_STORAGE_KEY = 'cc-wf-studio.refinement.allowedTools';
-const PROVIDER_STORAGE_KEY = 'cc-wf-studio.refinement.selectedProvider';
+const MODEL_STORAGE_KEY = 'agent-studio.refinement.selectedModel';
+const COPILOT_MODEL_STORAGE_KEY = 'agent-studio.refinement.selectedCopilotModel';
+const CODEX_MODEL_STORAGE_KEY = 'agent-studio.refinement.selectedCodexModel';
+const CODEX_REASONING_EFFORT_STORAGE_KEY = 'agent-studio.refinement.selectedCodexReasoningEffort';
+const ALLOWED_TOOLS_STORAGE_KEY = 'agent-studio.refinement.allowedTools';
+const PROVIDER_STORAGE_KEY = 'agent-studio.refinement.selectedProvider';
 // Note: Legacy key (kept for migration only)
-const COPILOT_ENABLED_STORAGE_KEY_LEGACY = 'cc-wf-studio:copilot-beta-enabled';
+const COPILOT_ENABLED_STORAGE_KEY_LEGACY = 'agent-studio:copilot-beta-enabled';
 // Note: These keys are shared with Toolbar.tsx for the "Copilot Chat" and "Copilot CLI" toggles
-const COPILOT_CHAT_ENABLED_STORAGE_KEY = 'cc-wf-studio:copilot-chat-enabled';
-const COPILOT_CLI_ENABLED_STORAGE_KEY = 'cc-wf-studio:copilot-cli-enabled';
+const COPILOT_CHAT_ENABLED_STORAGE_KEY = 'agent-studio:copilot-chat-enabled';
+const COPILOT_CLI_ENABLED_STORAGE_KEY = 'agent-studio:copilot-cli-enabled';
 // Note: This key is shared with Toolbar.tsx for the "Codex (Beta)" toggle
-const CODEX_ENABLED_STORAGE_KEY = 'cc-wf-studio:codex-beta-enabled';
+const CODEX_ENABLED_STORAGE_KEY = 'agent-studio:codex-beta-enabled';
 // Note: This key is shared with Toolbar.tsx for the "Roo Code (Beta)" toggle
-const ROO_CODE_ENABLED_STORAGE_KEY = 'cc-wf-studio:roo-code-beta-enabled';
+const ROO_CODE_ENABLED_STORAGE_KEY = 'agent-studio:roo-code-beta-enabled';
 // Note: This key is shared with Toolbar.tsx for the "Gemini CLI (Beta)" toggle
-const GEMINI_ENABLED_STORAGE_KEY = 'cc-wf-studio:gemini-beta-enabled';
+const GEMINI_ENABLED_STORAGE_KEY = 'agent-studio:gemini-beta-enabled';
 // Note: This key is shared with Toolbar.tsx for the "Antigravity (Beta)" toggle
-const ANTIGRAVITY_ENABLED_STORAGE_KEY = 'cc-wf-studio:antigravity-enabled';
+const ANTIGRAVITY_ENABLED_STORAGE_KEY = 'agent-studio:antigravity-enabled';
 // Note: This key is shared with Toolbar.tsx for the "Cursor (Beta)" toggle
-const CURSOR_ENABLED_STORAGE_KEY = 'cc-wf-studio:cursor-enabled';
+const CURSOR_ENABLED_STORAGE_KEY = 'agent-studio:cursor-enabled';
 
 // Available tools for Claude Code CLI (used in AI editing allowed tools)
 export const AVAILABLE_TOOLS = [
@@ -275,8 +275,8 @@ function saveProviderToStorage(provider: AiCliProvider): void {
 
 /**
  * Migrate legacy Copilot enabled state to new split keys.
- * Old: cc-wf-studio:copilot-beta-enabled + cc-wf-studio.copilotExecutionMode
- * New: cc-wf-studio:copilot-chat-enabled + cc-wf-studio:copilot-cli-enabled
+ * Old: agent-studio:copilot-beta-enabled + agent-studio.copilotExecutionMode
+ * New: agent-studio:copilot-chat-enabled + agent-studio:copilot-cli-enabled
  */
 function migrateCopilotEnabledState(): void {
   try {
@@ -289,7 +289,7 @@ function migrateCopilotEnabledState(): void {
     if (legacyEnabled === null) return;
 
     if (legacyEnabled === 'true') {
-      const legacyMode = localStorage.getItem('cc-wf-studio.copilotExecutionMode');
+      const legacyMode = localStorage.getItem('agent-studio.copilotExecutionMode');
       if (legacyMode === 'vscode') {
         localStorage.setItem(COPILOT_CHAT_ENABLED_STORAGE_KEY, 'true');
         localStorage.setItem(COPILOT_CLI_ENABLED_STORAGE_KEY, 'false');

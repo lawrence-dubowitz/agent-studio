@@ -2,7 +2,7 @@
  * Claude Code Workflow Studio - Workflow Service
  *
  * Handles workflow serialization, deserialization, and validation
- * Based on: /specs/001-cc-wf-studio/data-model.md
+ * Based on: /specs/001-agent-studio/data-model.md
  */
 
 import {

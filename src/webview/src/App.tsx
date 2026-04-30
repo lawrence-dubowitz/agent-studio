@@ -2,7 +2,7 @@
  * Claude Code Workflow Studio - Main App Component
  *
  * Root component for the Webview UI with 3-column layout
- * Based on: /specs/001-cc-wf-studio/plan.md
+ * Based on: /specs/001-agent-studio/plan.md
  */
 
 import * as Collapsible from '@radix-ui/react-collapsible';
@@ -212,7 +212,7 @@ const App: React.FC = () => {
   const [showWhatsNewBadge, setShowWhatsNewBadge] = useState(true);
   const [isWhatsNewFromStartMenu, setIsWhatsNewFromStartMenu] = useState(false);
   const [showMcpRefreshDialog, setShowMcpRefreshDialog] = useState(false);
-  const [mcpRefreshSkillName, setMcpRefreshSkillName] = useState<string>('cc-workflow-ai-editor');
+  const [mcpRefreshSkillName, setMcpRefreshSkillName] = useState<string>('agent-ai-editor');
   const [emptyStateDismissed, setEmptyStateDismissed] = useState(false);
 
   // Pending MCP apply state for diff preview
@@ -502,7 +502,7 @@ const App: React.FC = () => {
         }
       } else if (message.type === 'ANTIGRAVITY_MCP_REFRESH_NEEDED') {
         const refreshPayload = message.payload as AntigravityMcpRefreshNeededPayload | undefined;
-        setMcpRefreshSkillName(refreshPayload?.skillName || 'cc-workflow-ai-editor');
+        setMcpRefreshSkillName(refreshPayload?.skillName || 'agent-ai-editor');
         setShowMcpRefreshDialog(true);
       } else if (message.type === 'APPLY_WORKFLOW_FROM_MCP') {
         // MCP Server applying workflow to canvas

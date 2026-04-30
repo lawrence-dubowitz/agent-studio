@@ -1,7 +1,7 @@
 /**
  * Claude Code Workflow Studio - Workflow Definition Types
  *
- * Based on: /specs/001-cc-wf-studio/data-model.md
+ * Based on: /specs/001-agent-studio/data-model.md
  */
 
 // ============================================================================

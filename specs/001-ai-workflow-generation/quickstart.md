@@ -15,7 +15,7 @@ Before starting implementation, ensure you have:
    - React 18.2+ knowledge (for Webview UI)
 
 2. **Codebase Familiarity**:
-   - Read `specs/001-cc-wf-studio/spec.md` (base application spec)
+   - Read `specs/001-agent-studio/spec.md` (base application spec)
    - Understand existing Extension ↔ Webview message-passing (`src/shared/types/messages.ts`)
    - Familiar with ReactFlow (workflow canvas library)
    - Familiar with Zustand (state management)
@@ -448,7 +448,7 @@ From [spec.md](spec.md) Success Criteria:
 - **VSCode Extension API**: [https://code.visualstudio.com/api](https://code.visualstudio.com/api)
 - **ReactFlow Documentation**: [https://reactflow.dev/](https://reactflow.dev/)
 - **Node.js child_process**: [https://nodejs.org/api/child_process.html](https://nodejs.org/api/child_process.html)
-- **Existing Feature Specs**: `specs/001-cc-wf-studio/` (base application)
+- **Existing Feature Specs**: `specs/001-agent-studio/` (base application)
 
 ---
 

@@ -2,7 +2,7 @@
  * Claude Code Workflow Studio - Workflow State Store
  *
  * Zustand store for managing workflow state (nodes and edges)
- * Based on: /specs/001-cc-wf-studio/research.md section 3.4
+ * Based on: /specs/001-agent-studio/research.md section 3.4
  */
 
 import type { McpNodeData } from '@shared/types/mcp-node';
@@ -316,24 +316,24 @@ export const useWorkflowStore = create<WorkflowStore>()(
       activeWorkflow: null,
       interactionMode: 'pan', // Default: pan mode
       scrollMode: (() => {
-        const saved = localStorage.getItem('cc-wf-studio.scrollMode');
+        const saved = localStorage.getItem('agent-studio.scrollMode');
         return saved === 'freehand' ? 'freehand' : 'classic'; // Default: classic
       })() as ScrollMode,
       workflowName: 'my-workflow', // Default workflow name
       workflowDescription: '', // Default workflow description
       isPropertyOverlayOpen: true, // Property overlay is open by default
       minimapDisplayMode: (() => {
-        const saved = localStorage.getItem('cc-wf-studio.minimapDisplayMode');
+        const saved = localStorage.getItem('agent-studio.minimapDisplayMode');
         if (saved === 'hidden' || saved === 'auto' || saved === 'always') return saved;
         return 'auto'; // Default: auto (show on scroll)
       })() as 'hidden' | 'auto' | 'always',
       isMinimapShown: false, // Controlled by scroll events (for 'auto' mode)
       isDescriptionPanelVisible: (() => {
-        const saved = localStorage.getItem('cc-wf-studio.descriptionPanelVisible');
+        const saved = localStorage.getItem('agent-studio.descriptionPanelVisible');
         return saved !== null ? saved === 'true' : false; // Default: collapsed
       })(),
       isFocusMode: (() => {
-        const saved = localStorage.getItem('cc-wf-studio.focusMode');
+        const saved = localStorage.getItem('agent-studio.focusMode');
         return saved !== null ? saved === 'true' : false; // Default: off
       })(),
       slashCommandOptions: {
@@ -436,7 +436,7 @@ export const useWorkflowStore = create<WorkflowStore>()(
 
       toggleScrollMode: () => {
         const newMode = get().scrollMode === 'classic' ? 'freehand' : 'classic';
-        localStorage.setItem('cc-wf-studio.scrollMode', newMode);
+        localStorage.setItem('agent-studio.scrollMode', newMode);
         set({ scrollMode: newMode });
       },
 
@@ -449,7 +449,7 @@ export const useWorkflowStore = create<WorkflowStore>()(
       closePropertyOverlay: () => set({ isPropertyOverlayOpen: false }),
 
       setMinimapDisplayMode: (mode) => {
-        localStorage.setItem('cc-wf-studio.minimapDisplayMode', mode);
+        localStorage.setItem('agent-studio.minimapDisplayMode', mode);
         set({ minimapDisplayMode: mode, isMinimapShown: false });
       },
 
@@ -457,13 +457,13 @@ export const useWorkflowStore = create<WorkflowStore>()(
 
       toggleDescriptionPanelVisibility: () => {
         const newValue = !get().isDescriptionPanelVisible;
-        localStorage.setItem('cc-wf-studio.descriptionPanelVisible', newValue.toString());
+        localStorage.setItem('agent-studio.descriptionPanelVisible', newValue.toString());
         set({ isDescriptionPanelVisible: newValue });
       },
 
       toggleFocusMode: () => {
         const newValue = !get().isFocusMode;
-        localStorage.setItem('cc-wf-studio.focusMode', newValue.toString());
+        localStorage.setItem('agent-studio.focusMode', newValue.toString());
         set({ isFocusMode: newValue });
       },
 

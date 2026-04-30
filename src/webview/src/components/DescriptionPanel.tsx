@@ -48,11 +48,11 @@ export const DescriptionPanel: React.FC = () => {
 
   // Panel size state with localStorage persistence
   const [panelWidth, setPanelWidth] = useState(() => {
-    const saved = localStorage.getItem('cc-wf-studio.descriptionPanelWidth');
+    const saved = localStorage.getItem('agent-studio.descriptionPanelWidth');
     return saved ? Number.parseInt(saved, 10) : 280;
   });
   const [panelHeight, setPanelHeight] = useState(() => {
-    const saved = localStorage.getItem('cc-wf-studio.descriptionPanelHeight');
+    const saved = localStorage.getItem('agent-studio.descriptionPanelHeight');
     return saved ? Number.parseInt(saved, 10) : 160;
   });
 
@@ -69,11 +69,11 @@ export const DescriptionPanel: React.FC = () => {
 
   // Save size to localStorage when changed
   useEffect(() => {
-    localStorage.setItem('cc-wf-studio.descriptionPanelWidth', panelWidth.toString());
+    localStorage.setItem('agent-studio.descriptionPanelWidth', panelWidth.toString());
   }, [panelWidth]);
 
   useEffect(() => {
-    localStorage.setItem('cc-wf-studio.descriptionPanelHeight', panelHeight.toString());
+    localStorage.setItem('agent-studio.descriptionPanelHeight', panelHeight.toString());
   }, [panelHeight]);
 
   // Handle resize mouse events

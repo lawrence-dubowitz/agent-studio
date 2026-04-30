@@ -1,8 +1,8 @@
 /**
- * CC Workflow Studio - Open Editor Command
+ * Agent Studio - Open Editor Command
  *
  * Creates and manages the Webview panel for the workflow editor
- * Based on: /specs/001-cc-wf-studio/contracts/vscode-extension-api.md section 1.1
+ * Based on: /specs/001-agent-studio/contracts/vscode-extension-api.md section 1.1
  */
 
 import * as crypto from 'node:crypto';
@@ -180,7 +180,7 @@ export function registerOpenEditorCommand(
   context: vscode.ExtensionContext
 ): vscode.WebviewPanel | null {
   const openEditorCommand = vscode.commands.registerCommand(
-    'cc-wf-studio.openEditor',
+    'agent-studio.openEditor',
     (importParams?: ImportParameters | vscode.Uri) => {
       // Filter out vscode.Uri objects (file paths) - only process ImportParameters
       // This prevents unintended import when .json files are opened in VSCode
@@ -245,7 +245,7 @@ export function registerOpenEditorCommand(
       // Create new webview panel
       currentPanel = vscode.window.createWebviewPanel(
         'ccWorkflowStudio',
-        'CC Workflow Studio',
+        'Agent Studio',
         columnToShowIn || vscode.ViewColumn.One,
         {
           enableScripts: true,
@@ -286,7 +286,7 @@ export function registerOpenEditorCommand(
 
           // Helper: get configured MCP port from VSCode settings
           function getConfiguredMcpPort(): number {
-            return vscode.workspace.getConfiguration('cc-wf-studio').get<number>('mcp.port', 6282);
+            return vscode.workspace.getConfiguration('agent-studio').get<number>('mcp.port', 6282);
           }
 
           // Helper: ensure MCP server is running and config written for Run operations
@@ -1936,7 +1936,7 @@ export function registerOpenEditorCommand(
                     requestId: message.requestId,
                     payload: {
                       context: 'ai-editing' as const,
-                      skillName: 'cc-workflow-ai-editor',
+                      skillName: 'agent-ai-editor',
                     },
                   });
                   log('INFO', 'Antigravity MCP refresh needed, waiting for user', {
@@ -1982,7 +1982,7 @@ export function registerOpenEditorCommand(
 
             case 'CONFIRM_ANTIGRAVITY_CASCADE_LAUNCH': {
               try {
-                const skillName = message.payload?.skillName || 'cc-workflow-ai-editor';
+                const skillName = message.payload?.skillName || 'agent-ai-editor';
                 await startAntigravityTask(skillName);
                 webview.postMessage({
                   type: 'LAUNCH_AI_AGENT_SUCCESS',
@@ -2228,7 +2228,7 @@ export function registerOpenEditorCommand(
       );
 
       // Show information message
-      vscode.window.showInformationMessage('CC Workflow Studio: Editor opened!');
+      vscode.window.showInformationMessage('Agent Studio: Editor opened!');
     }
   );
 

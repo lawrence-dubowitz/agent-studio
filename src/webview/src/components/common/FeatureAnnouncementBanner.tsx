@@ -8,7 +8,7 @@
 import { Terminal, X } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 
-const DISMISSED_KEY_PREFIX = 'cc-wf-studio:feature-dismissed:';
+const DISMISSED_KEY_PREFIX = 'agent-studio:feature-dismissed:';
 
 interface FeatureAnnouncementBannerProps {
   /** Unique identifier for this feature announcement (used for localStorage key) */

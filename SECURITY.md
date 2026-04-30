@@ -11,7 +11,7 @@ We release patches for security vulnerabilities. Currently supported versions:
 
 ## Reporting a Vulnerability
 
-We take the security of CC Workflow Studio seriously. If you believe you have found a security vulnerability, please report it to us as described below.
+We take the security of Agent Studio seriously. If you believe you have found a security vulnerability, please report it to us as described below.
 
 ### Reporting Process
 
@@ -20,7 +20,7 @@ We take the security of CC Workflow Studio seriously. If you believe you have fo
 Instead, please report them via:
 
 1. **GitHub Security Advisory**
-   - Go to the [Security tab](https://github.com/breaking-brake/cc-wf-studio/security/advisories) of this repository
+   - Go to the [Security tab](https://github.com/breaking-brake/agent-studio/security/advisories) of this repository
    - Click "Report a vulnerability"
    - Provide detailed information about the vulnerability
 
@@ -56,7 +56,7 @@ This project implements the following security measures:
   - Weekly automated scans every Monday
   - Scans on every push to `main` and `production` branches
   - PR-based scanning for all pull requests
-  - [![Known Vulnerabilities](https://snyk.io/test/github/breaking-brake/cc-wf-studio/badge.svg)](https://snyk.io/test/github/breaking-brake/cc-wf-studio)
+  - [![Known Vulnerabilities](https://snyk.io/test/github/breaking-brake/agent-studio/badge.svg)](https://snyk.io/test/github/breaking-brake/agent-studio)
 
 - **GitHub Dependabot**: Automated dependency updates for security patches
 
@@ -111,4 +111,4 @@ We appreciate the security research community's efforts in responsibly disclosin
 
 ---
 
-For general questions about security, please open a discussion in the [GitHub Discussions](https://github.com/breaking-brake/cc-wf-studio/discussions) section.
+For general questions about security, please open a discussion in the [GitHub Discussions](https://github.com/breaking-brake/agent-studio/discussions) section.

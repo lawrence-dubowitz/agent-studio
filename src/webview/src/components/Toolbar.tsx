@@ -1321,7 +1321,7 @@ export const Toolbar: React.FC<ToolbarProps> = ({
             marginLeft: '14px',
           }}
         >
-          cc-wf-studio MCP{' '}
+          agent-studio MCP{' '}
           <span
             style={{
               width: '6px',

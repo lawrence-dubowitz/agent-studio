@@ -1,5 +1,5 @@
 /**
- * CC Workflow Studio - Webview Simplified Chinese Translations
+ * Agent Studio - Webview Simplified Chinese Translations
  */
 
 import type { WebviewTranslationKeys } from '../translation-keys';
@@ -343,7 +343,7 @@ export const zhCNWebviewTranslations: WebviewTranslationKeys = {
   'default.conditionSuffix': ' 时',
 
   // Tour
-  'tour.welcome': '欢迎使用CC Workflow Studio！\n\n为您介绍基本操作方法。',
+  'tour.welcome': '欢迎使用Agent Studio！\n\n为您介绍基本操作方法。',
   'tour.canvas':
     '这是工作流画布。放置节点并连接它们来构建处理流水线。\n\n拖动节点移动位置，拖动手柄(⚪)连接节点。',
   'tour.propertyPanel': '点击节点会显示属性面板。\n\n在这里可以设置节点名称、提示、模型选择等。',
@@ -785,7 +785,7 @@ export const zhCNWebviewTranslations: WebviewTranslationKeys = {
 
   // Slack OAuth
   'slack.oauth.description':
-    '点击连接到工作区按钮将显示允许"CC Workflow Studio"访问 Slack 的确认画面。\n授权后，连接用的 Slack App 将安装到您的工作区。',
+    '点击连接到工作区按钮将显示允许"Agent Studio"访问 Slack 的确认画面。\n授权后，连接用的 Slack App 将安装到您的工作区。',
   'slack.oauth.termsOfService': '服务条款',
   'slack.oauth.privacyPolicy': '隐私政策',
   'slack.oauth.supportPage': '支持页面',

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "metadata": {
-    "description": "Workflow schema for CC Workflow Studio",
+    "description": "Workflow schema for Agent Studio",
     "maxNodes": 100,
     "supportedNodeTypes": [
       "start",

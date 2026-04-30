@@ -24,7 +24,7 @@ export type AiEditingProvider =
   | 'antigravity'
   | 'cursor';
 
-const SKILL_NAME = 'cc-workflow-ai-editor';
+const SKILL_NAME = 'agent-ai-editor';
 
 /**
  * Get the skill file destination path for a given provider

@@ -6,7 +6,7 @@
 
 ## Overview
 
-このドキュメントは、CC Workflow Studio 拡張機能が使用する VSCode Extension API の契約を定義します。すべての API 呼び出しは `vscode` モジュールを通じて行われます。
+このドキュメントは、Agent Studio 拡張機能が使用する VSCode Extension API の契約を定義します。すべての API 呼び出しは `vscode` モジュールを通じて行われます。
 
 ---
 
@@ -14,13 +14,13 @@
 
 拡張機能が登録するコマンドとその動作です。
 
-### 1.1 `cc-wf-studio.openEditor`
+### 1.1 `agent-studio.openEditor`
 
 ワークフローエディタを開きます。
 
-**Command ID**: `cc-wf-studio.openEditor`
+**Command ID**: `agent-studio.openEditor`
 
-**Title**: `CC Workflow Studio: Open Editor`
+**Title**: `Agent Studio: Open Editor`
 
 **Trigger**:
 - コマンドパレットから実行
@@ -33,9 +33,9 @@
 
 **Implementation**:
 ```typescript
-vscode.commands.registerCommand('cc-wf-studio.openEditor', () => {
+vscode.commands.registerCommand('agent-studio.openEditor', () => {
   const panel = vscode.window.createWebviewPanel(
-    'cc-wf-studio',
+    'agent-studio',
     'Workflow Studio',
     vscode.ViewColumn.One,
     {
@@ -53,13 +53,13 @@ vscode.commands.registerCommand('cc-wf-studio.openEditor', () => {
 
 ---
 
-### 1.2 `cc-wf-studio.newWorkflow`
+### 1.2 `agent-studio.newWorkflow`
 
 新しいワークフローを作成します。
 
-**Command ID**: `cc-wf-studio.newWorkflow`
+**Command ID**: `agent-studio.newWorkflow`
 
-**Title**: `CC Workflow Studio: New Workflow`
+**Title**: `Agent Studio: New Workflow`
 
 **Trigger**: コマンドパレット
 
@@ -69,13 +69,13 @@ vscode.commands.registerCommand('cc-wf-studio.openEditor', () => {
 
 ---
 
-### 1.3 `cc-wf-studio.saveWorkflow`
+### 1.3 `agent-studio.saveWorkflow`
 
 現在のワークフローを保存します。
 
-**Command ID**: `cc-wf-studio.saveWorkflow`
+**Command ID**: `agent-studio.saveWorkflow`
 
-**Title**: `CC Workflow Studio: Save Workflow`
+**Title**: `Agent Studio: Save Workflow`
 
 **Keybinding**: `Ctrl+S` (Windows/Linux), `Cmd+S` (macOS)
 
@@ -91,13 +91,13 @@ vscode.commands.registerCommand('cc-wf-studio.openEditor', () => {
 
 ---
 
-### 1.4 `cc-wf-studio.exportWorkflow`
+### 1.4 `agent-studio.exportWorkflow`
 
 ワークフローを `.claude` 形式にエクスポートします。
 
-**Command ID**: `cc-wf-studio.exportWorkflow`
+**Command ID**: `agent-studio.exportWorkflow`
 
-**Title**: `CC Workflow Studio: Export Workflow`
+**Title**: `Agent Studio: Export Workflow`
 
 **Trigger**:
 - コマンドパレット
@@ -356,7 +356,7 @@ if (!workflowName) {
 **Usage**:
 ```typescript
 const panel = vscode.window.createWebviewPanel(
-  'cc-wf-studio',              // viewType
+  'agent-studio',              // viewType
   'Workflow Studio',           // title
   vscode.ViewColumn.One,       // showOptions
   {
@@ -489,7 +489,7 @@ panel.webview.postMessage({
 
 **Usage**:
 ```typescript
-const config = vscode.workspace.getConfiguration('cc-wf-studio');
+const config = vscode.workspace.getConfiguration('agent-studio');
 const workflowsDir = config.get<string>('workflowsDirectory', '.vscode/workflows');
 const exportDir = config.get<string>('exportDirectory', '.claude');
 ```
@@ -507,7 +507,7 @@ const exportDir = config.get<string>('exportDirectory', '.claude');
 
 **Usage**:
 ```typescript
-const config = vscode.workspace.getConfiguration('cc-wf-studio');
+const config = vscode.workspace.getConfiguration('agent-studio');
 await config.update(
   'workflowsDirectory',
   '.workflows',
@@ -555,7 +555,7 @@ export function activate(context: vscode.ExtensionContext) {
 **Usage**:
 ```typescript
 context.subscriptions.push(
-  vscode.commands.registerCommand('cc-wf-studio.openEditor', () => {
+  vscode.commands.registerCommand('agent-studio.openEditor', () => {
     // コマンド実装
   })
 );
@@ -577,9 +577,9 @@ context.subscriptions.push(
 以下のテストケースで契約の準拠を検証します:
 
 ### Commands:
-- [x] `cc-wf-studio.openEditor` コマンドが Webview Panel を開く
-- [x] `cc-wf-studio.saveWorkflow` コマンドがファイルに保存する
-- [x] `cc-wf-studio.exportWorkflow` コマンドが `.claude` 形式にエクスポートする
+- [x] `agent-studio.openEditor` コマンドが Webview Panel を開く
+- [x] `agent-studio.saveWorkflow` コマンドがファイルに保存する
+- [x] `agent-studio.exportWorkflow` コマンドが `.claude` 形式にエクスポートする
 
 ### File System:
 - [x] `vscode.workspace.fs.readFile()` がファイルを読み込む
@@ -608,5 +608,5 @@ context.subscriptions.push(
 - VSCode Extension API: https://code.visualstudio.com/api/references/vscode-api
 - Webview API Guide: https://code.visualstudio.com/api/extension-guides/webview
 - Extension Guidelines: https://code.visualstudio.com/api/references/extension-guidelines
-- Data Model: `/specs/001-cc-wf-studio/data-model.md`
-- Extension-Webview API: `/specs/001-cc-wf-studio/contracts/extension-webview-api.md`
+- Data Model: `/specs/001-agent-studio/data-model.md`
+- Extension-Webview API: `/specs/001-agent-studio/contracts/extension-webview-api.md`

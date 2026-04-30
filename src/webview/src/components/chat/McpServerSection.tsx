@@ -179,12 +179,12 @@ export function McpServerSection({ isCollapsed, onToggleCollapse }: McpServerSec
           tabIndex={0}
           onClick={(e) => {
             e.stopPropagation();
-            openExternalUrl('https://github.com/breaking-brake/cc-wf-studio#edit-with-ai');
+            openExternalUrl('https://github.com/breaking-brake/agent-studio#edit-with-ai');
           }}
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
               e.stopPropagation();
-              openExternalUrl('https://github.com/breaking-brake/cc-wf-studio#edit-with-ai');
+              openExternalUrl('https://github.com/breaking-brake/agent-studio#edit-with-ai');
             }
           }}
           style={{

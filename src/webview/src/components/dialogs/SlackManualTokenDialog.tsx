@@ -317,7 +317,7 @@ export function SlackManualTokenDialog({
                   <li>
                     <button
                       type="button"
-                      onClick={() => openExternalUrl('https://cc-wf-studio.com/terms')}
+                      onClick={() => openExternalUrl('https://agent-studio.com/terms')}
                       style={{
                         fontSize: '12px',
                         color: 'var(--vscode-textLink-foreground)',
@@ -339,7 +339,7 @@ export function SlackManualTokenDialog({
                   <li>
                     <button
                       type="button"
-                      onClick={() => openExternalUrl('https://cc-wf-studio.com/privacy')}
+                      onClick={() => openExternalUrl('https://agent-studio.com/privacy')}
                       style={{
                         fontSize: '12px',
                         color: 'var(--vscode-textLink-foreground)',
@@ -363,7 +363,7 @@ export function SlackManualTokenDialog({
                       type="button"
                       onClick={() =>
                         openExternalUrl(
-                          'https://github.com/breaking-brake/cc-wf-studio/issues/new/choose'
+                          'https://github.com/breaking-brake/agent-studio/issues/new/choose'
                         )
                       }
                       style={{
@@ -620,7 +620,7 @@ export function SlackManualTokenDialog({
                   <li>
                     <button
                       type="button"
-                      onClick={() => openExternalUrl('https://cc-wf-studio.com/terms')}
+                      onClick={() => openExternalUrl('https://agent-studio.com/terms')}
                       style={{
                         fontSize: '12px',
                         color: 'var(--vscode-textLink-foreground)',
@@ -642,7 +642,7 @@ export function SlackManualTokenDialog({
                   <li>
                     <button
                       type="button"
-                      onClick={() => openExternalUrl('https://cc-wf-studio.com/privacy')}
+                      onClick={() => openExternalUrl('https://agent-studio.com/privacy')}
                       style={{
                         fontSize: '12px',
                         color: 'var(--vscode-textLink-foreground)',
@@ -666,7 +666,7 @@ export function SlackManualTokenDialog({
                       type="button"
                       onClick={() =>
                         openExternalUrl(
-                          'https://github.com/breaking-brake/cc-wf-studio/issues/new/choose'
+                          'https://github.com/breaking-brake/agent-studio/issues/new/choose'
                         )
                       }
                       style={{

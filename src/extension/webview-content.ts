@@ -1,8 +1,8 @@
 /**
- * CC Workflow Studio - Webview HTML Generator
+ * Agent Studio - Webview HTML Generator
  *
  * Generates the HTML content for the Webview panel
- * Based on: /specs/001-cc-wf-studio/contracts/vscode-extension-api.md section 4.2
+ * Based on: /specs/001-agent-studio/contracts/vscode-extension-api.md section 4.2
  */
 
 import * as vscode from 'vscode';
@@ -52,7 +52,7 @@ export function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.
 
     <link href="${styleUri}" rel="stylesheet">
 
-    <title>CC Workflow Studio</title>
+    <title>Agent Studio</title>
 </head>
 <body>
     <div id="root"></div>

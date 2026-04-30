@@ -2,7 +2,7 @@
  * Claude Code Workflow Studio - Export Service
  *
  * Handles workflow export to .claude format
- * Based on: /specs/001-cc-wf-studio/spec.md Export Format Details
+ * Based on: /specs/001-agent-studio/spec.md Export Format Details
  */
 
 import * as path from 'node:path';

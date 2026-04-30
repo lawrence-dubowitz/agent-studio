@@ -163,7 +163,7 @@ const projectSkillsDir = workspaceRoot
 **Question**: What's the best UI pattern for browsing Skills in a VSCode extension webview?
 
 **Research Approach**:
-- Review existing dialogs in cc-wf-studio: `AiGenerationDialog.tsx`, `ConfirmDialog.tsx`
+- Review existing dialogs in agent-studio: `AiGenerationDialog.tsx`, `ConfirmDialog.tsx`
 - Analyze React Flow documentation for modal best practices
 - Consider accessibility requirements
 

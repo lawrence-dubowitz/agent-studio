@@ -1,6 +1,6 @@
-# タスク一覧: CC Workflow Studio
+# タスク一覧: Agent Studio
 
-**入力**: `/specs/001-cc-wf-studio/` の設計ドキュメント
+**入力**: `/specs/001-agent-studio/` の設計ドキュメント
 **前提条件**: plan.md, spec.md, research.md, data-model.md, contracts/
 
 **構成**: タスクはユーザーストーリーごとにグループ化され、各ストーリーを独立して実装・テストできるようにしています。
@@ -27,7 +27,7 @@
 - [X] T004 [P] Extension依存関係をインストール: package.jsonに@types/vscode, @types/nodeを追加
 - [X] T005 [P] Webview依存関係をインストール: src/webview/package.jsonにreact, react-dom, reactflow, zustand, @types/reactを追加
 - [X] T006 [P] biome.jsonでBiomeを設定（コードフォーマット・リンター）
-- [X] T007 package.jsonに拡張機能メタデータを作成 (name: cc-wf-studio, displayName, publisher, activationEvents)
+- [X] T007 package.jsonに拡張機能メタデータを作成 (name: agent-studio, displayName, publisher, activationEvents)
 - [X] T008 Extension Development Hostデバッグ用に.vscode/launch.jsonを作成
 - [X] T009 コンパイルとウォッチタスク用に.vscode/tasks.jsonを作成
 
@@ -55,7 +55,7 @@
 
 **目標**: VSCode上でビジュアルエディタを開き、Sub-AgentノードとAskUserQuestionノードをドラッグ&ドロップで配置・接続し、ワークフローを作成できる
 
-**独立テスト**: VSCode拡張機能をインストール後、コマンドパレットから「CC Workflow Studio」を開き、新規ワークフローを作成。Sub-Agentノードを1つ配置して保存できることを確認すれば、基本的なエディタ機能が動作していると検証できる。
+**独立テスト**: VSCode拡張機能をインストール後、コマンドパレットから「Agent Studio」を開き、新規ワークフローを作成。Sub-Agentノードを1つ配置して保存できることを確認すれば、基本的なエディタ機能が動作していると検証できる。
 
 ### ユーザーストーリー1の実装
 
@@ -155,7 +155,7 @@
 
 - [ ] T052 [P] src/extension/services/logger.tsに包括的なロギングを追加 (拡張機能ログ用vscode.window.createOutputChannel)
 - [ ] T053 [P] src/extension/services/telemetry.tsにテレメトリーを実装 (ワークフロー作成、保存、エクスポートイベントの追跡 - オプション、プライバシー対応)
-- [ ] T054 [P] src/extension/services/config-service.tsに設定サポートを追加 (vscode-extension-api.md section 5のvscode.workspace.getConfigurationからcc-wf-studio.workflowsDirectory, cc-wf-studio.exportDirectoryを読み取り)
+- [ ] T054 [P] src/extension/services/config-service.tsに設定サポートを追加 (vscode-extension-api.md section 5のvscode.workspace.getConfigurationからagent-studio.workflowsDirectory, agent-studio.exportDirectoryを読み取り)
 - [ ] T055 package.jsonにcontributes.configurationを作成 (vscode-extension-api.md section 5.2のworkflowsDirectory, exportDirectory設定を定義)
 - [ ] T056 拡張機能アイコンとREADME.mdを追加 (マーケットプレイスアセット、使用方法)
 - [ ] T057 [P] quickstart.mdの検証を実行 (すべてのセットアップ手順が機能することを確認、クリーン環境でテスト)

@@ -1,5 +1,5 @@
 /**
- * CC Workflow Studio - Extension Entry Point
+ * Agent Studio - Extension Entry Point
  *
  * Main activation and deactivation logic for the VSCode extension.
  */
@@ -67,10 +67,10 @@ export function getMcpServerManager(): McpServerManager | null {
  */
 export function activate(context: vscode.ExtensionContext): void {
   // Create output channel
-  outputChannel = vscode.window.createOutputChannel('CC Workflow Studio');
+  outputChannel = vscode.window.createOutputChannel('Agent Studio');
   context.subscriptions.push(outputChannel);
 
-  log('INFO', 'CC Workflow Studio is now active');
+  log('INFO', 'Agent Studio is now active');
 
   // Create MCP Server Manager (started via UI, not automatically)
   mcpServerManager = new McpServerManager();
@@ -119,7 +119,7 @@ export function activate(context: vscode.ExtensionContext): void {
     })
   );
 
-  // Register URI handler for deep links (vscode://cc-wf-studio/import?...)
+  // Register URI handler for deep links (vscode://agent-studio/import?...)
   context.subscriptions.push(
     vscode.window.registerUriHandler({
       handleUri(uri: vscode.Uri): void {
@@ -171,7 +171,7 @@ export function activate(context: vscode.ExtensionContext): void {
 
           // Open editor with import parameters
           vscode.commands
-            .executeCommand('cc-wf-studio.openEditor', {
+            .executeCommand('agent-studio.openEditor', {
               fileId,
               channelId,
               messageTs,
@@ -190,7 +190,7 @@ export function activate(context: vscode.ExtensionContext): void {
     })
   );
 
-  log('INFO', 'CC Workflow Studio: All commands and handlers registered');
+  log('INFO', 'Agent Studio: All commands and handlers registered');
 }
 
 /**
@@ -210,7 +210,7 @@ export async function deactivate(): Promise<void> {
   }
   mcpServerManager = null;
 
-  log('INFO', 'CC Workflow Studio is now deactivated');
+  log('INFO', 'Agent Studio is now deactivated');
   outputChannel?.dispose();
   outputChannel = null;
 }
