@@ -5,10 +5,7 @@
 # Agent Studio
 
 <p align="center">
-  <a href="https://github.com/breaking-brake/agent-studio/stargazers"><img src="https://img.shields.io/github/stars/breaking-brake/agent-studio" alt="GitHub Stars" /></a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=breaking-brake.agent-studio"><img src="https://vsmarketplacebadges.dev/version-short/breaking-brake.agent-studio.svg?label=VS%20Marketplace" alt="VS Code Marketplace" /></a>
-  <a href="https://open-vsx.org/extension/breaking-brake/agent-studio"><img src="https://img.shields.io/open-vsx/v/breaking-brake/agent-studio?label=OpenVSX" alt="OpenVSX" /></a>
-  <a href="https://deepwiki.com/breaking-brake/agent-studio"><img src="https://img.shields.io/badge/Ask-DeepWiki-009485" alt="Ask DeepWiki" /></a>
+  <a href="https://github.com/lawrence-dubowitz/agent-studio/stargazers"><img src="https://img.shields.io/github/stars/lawrence-dubowitz/agent-studio" alt="GitHub Stars" /></a>
 </p>
 
 <p align="center">
@@ -146,11 +143,11 @@ See the [LICENSE](./LICENSE) file for the full license text.
   - Provide access to the source code for users interacting with the service
 - Commercial use is allowed, but proprietary modifications are not
 
-Copyright (c) 2025 breaking-brake
+Copyright (c) 2025 lawrence-dubowitz
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=breaking-brake/agent-studio&type=Date)](https://star-history.com/#breaking-brake/agent-studio&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=lawrence-dubowitz/agent-studio&type=Date)](https://star-history.com/#lawrence-dubowitz/agent-studio&Date)
 
 ## Acknowledgments
 

@@ -8,8 +8,8 @@
  * This handles GUI-launched VSCode scenarios where the Extension Host
  * doesn't inherit the user's shell PATH settings.
  *
- * Issue #375: https://github.com/breaking-brake/agent-studio/issues/375
- * PR #376: https://github.com/breaking-brake/agent-studio/pull/376
+ * Issue #375: https://github.com/lawrence-dubowitz/agent-studio/issues/375
+ * PR #376: https://github.com/lawrence-dubowitz/agent-studio/pull/376
  */
 
 import { log } from '../extension';

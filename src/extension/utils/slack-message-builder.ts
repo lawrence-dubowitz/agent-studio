@@ -22,7 +22,7 @@ const SUPPORTED_EDITORS = [
 /**
  * Extension ID for the workflow studio extension
  */
-const EXTENSION_ID = 'breaking-brake.agent-studio';
+const EXTENSION_ID = 'lawrence-dubowitz.agent-studio';
 
 /**
  * Builds an import URI for a specific editor

@@ -3,13 +3,13 @@
   "displayName": "Agent Studio",
   "description": "Visual Workflow Editor for Claude Code, GitHub Copilot, and more AI agents",
   "version": "3.33.0",
-  "publisher": "breaking-brake",
+  "publisher": "lawrence-dubowitz",
   "icon": "resources/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/breaking-brake/agent-studio"
+    "url": "https://github.com/lawrence-dubowitz/agent-studio"
   },
-  "homepage": "https://breaking-brake.github.io/agent-studio",
+  "homepage": "https://lawrence-dubowitz.github.io/agent-studio",
   "license": "AGPL-3.0-or-later",
   "keywords": [
     "ai",

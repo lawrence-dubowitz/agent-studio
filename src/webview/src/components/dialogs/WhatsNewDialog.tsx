@@ -305,11 +305,13 @@ export function WhatsNewDialog({
                     role="button"
                     tabIndex={0}
                     onClick={() =>
-                      openExternalUrl('https://github.com/breaking-brake/agent-studio/releases')
+                      openExternalUrl('https://github.com/lawrence-dubowitz/agent-studio/releases')
                     }
                     onKeyDown={(e) => {
                       if (e.key === 'Enter' || e.key === ' ') {
-                        openExternalUrl('https://github.com/breaking-brake/agent-studio/releases');
+                        openExternalUrl(
+                          'https://github.com/lawrence-dubowitz/agent-studio/releases'
+                        );
                       }
                     }}
                     style={{

@@ -363,7 +363,7 @@ export function SlackManualTokenDialog({
                       type="button"
                       onClick={() =>
                         openExternalUrl(
-                          'https://github.com/breaking-brake/agent-studio/issues/new/choose'
+                          'https://github.com/lawrence-dubowitz/agent-studio/issues/new/choose'
                         )
                       }
                       style={{
@@ -666,7 +666,7 @@ export function SlackManualTokenDialog({
                       type="button"
                       onClick={() =>
                         openExternalUrl(
-                          'https://github.com/breaking-brake/agent-studio/issues/new/choose'
+                          'https://github.com/lawrence-dubowitz/agent-studio/issues/new/choose'
                         )
                       }
                       style={{
